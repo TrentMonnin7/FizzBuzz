@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <script>
+
+
+//prompt the user to input an integer
+        let selectedNumber=prompt("Please input an integer");
+        let index = 0;
+
+
+        //Check to ensure the input value is an integer, if not not, will reprompt
+        while(index===0){
+            if(isNaN(selectedNumber)){
+                alert("That is not an integer.")
+                selectedNumber=prompt("Please input an integer");
+            }
+            else{
+                index=1;
+            }
+        }
+        
+        
+        //Loops from 1-selected number and prints  the value as well as the correlating Fizz, Buzz, or FizzBuzz
+        function FizzBuzz(Number){
+            for (let i = 1; i < selectedNumber; i++ ){
+                if (i % 3 == 0 && i % 5 == 0 ){
+                    console.log(i, "FizzBuzz")
+                } else if (i % 3 == 0 ){
+                    console.log(i, "Fizz")
+                } else if (i % 5 == 0){
+                    console.log(i, "Buzz")
+                } else {
+                    console.log(i)
+                }
+        }
+
+
+    }
+
+    FizzBuzz(selectedNumber);
+
+
+    </script>
+</body>
+</html>
